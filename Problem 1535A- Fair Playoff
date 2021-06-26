@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int t,max1,max2,i,j,temp;
+	cin>>t;
+	int arr[4];
+	while(t--)
+	{
+	    for(i=0;i<4;i++)
+	    {
+	        cin>>arr[i];
+	    }
+	    
+    	max1=max(arr[0], arr[1]);
+    	max2=max(arr[2], arr[3]);
+    	
+    	for (i = 0; i < 4; i++)
+        {
+            for (j = i + 1; j < 4; j++)
+            {
+                if (arr[i] < arr[j])
+                {
+                    temp =  arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        
+        if(((max1==arr[0]) or (max1==arr[1])) and ((max2==arr[0]) or (max2==arr[1])))
+    	{
+    	    cout<<"YES"<<endl;
+    	    
+    	}
+    	else
+    	    cout<<"NO"<<endl;
+
+	}
+}
