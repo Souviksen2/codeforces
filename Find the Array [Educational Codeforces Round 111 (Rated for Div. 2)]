@@ -1,0 +1,25 @@
+# include <bits/stdc++.h>
+#define long long int
+using namespace std;
+int main() {
+	
+	int t;
+	cin>>t;
+	
+	while(t--)
+    {
+        int s;
+        cin>>s;
+        int ans=0,sum=0,inc=1;
+        while(sum<s)
+        {
+            sum+=inc;
+            inc+=2;
+            ans++;
+        }
+        cout<<ans<<endl;
+        
+    }
+	
+	
+}
