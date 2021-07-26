@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        string s,str;
+        cin>>n;
+        cin>>s;
+        str=s;
+        int count=0;
+        sort(str.begin(),str.end());
+        for(int i=0;i<n;i++)
+        {
+            if(s[i]!=str[i])
+            {
+                count++;
+            }
+        }
+        cout<<count<<"\n";
+        
+    }
+    return 0;
+}
+        
